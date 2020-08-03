@@ -6,7 +6,7 @@ import studyIcon from '../../assets/images/icons/study.svg';
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
-// import { Container } from './styles';
+import  './styles.css';
 
 function Landing() {
     return (
