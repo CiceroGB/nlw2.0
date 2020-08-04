@@ -60,6 +60,7 @@ routes.post('/classes', async (req, res) => {
 
     } catch (err) {
         await trx.rollback();
+        console.log(err)
         return res.status(400).json({
             error: 'Error while creating new class'
         })
