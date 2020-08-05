@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import {useHistory} from 'react-router';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
@@ -7,9 +8,12 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
 import Select from '../../components/Select';
+import api from '../../services/api';
 
 
 function TeacherForm() {
+
+    const history = useHistory();
 
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
@@ -20,23 +24,46 @@ function TeacherForm() {
     const [cost, setCost] = useState('');
 
 
-    const [scheduleItems, serScheduleItems] = useState([
+    const [scheduleItems, setScheduleItems] = useState([
         { week_day: 0, from: '', to: '' }
     ]);
 
     function addNewScheduleItens() {
-        serScheduleItems([
+        setScheduleItems([
             ...scheduleItems,
             { week_day: 0, from: '', to: '' }
 
         ]);
     }
 
+    function setScheduleItemValue(position: number, field: string, value: string) {
+        const newArray = scheduleItems.map((item, index) => {
+            if (index === position) {
+                return { ...item, [field]: value }
+            }
+            return item;
+        })
+        setScheduleItems(newArray);
+    }
+
     function handleCreateClass(e: FormEvent) {
         e.preventDefault();
-        console.log(
-            name, avatar, whatsapp, bio, subject, cost
-        )
+
+        api.post('classes',{
+            name,
+            avatar,
+            whatsapp,
+            bio,
+            subject,
+            cost: Number(cost),
+            schedule: scheduleItems
+        }).then(()=>{
+            alert('Cadastro Realizado');
+            history.push('/');
+        }).catch(()=>{
+            alert('Erro no cadastro');
+        })
+        
     }
 
 
@@ -108,12 +135,14 @@ function TeacherForm() {
                             </button>
                         </legend>
 
-                        {scheduleItems.map(scheduleItem => {
+                        {scheduleItems.map((scheduleItem, index) => {
                             return (
                                 <div key={scheduleItem.week_day} className="schedule-item">
                                     <Select
                                         name="week_day"
                                         label="Dia da Semana"
+                                        value = {scheduleItem.week_day}
+                                        onChange={(e) => setScheduleItemValue(index, 'week_day', e.target.value)}
                                         options={[
                                             { value: '0', label: 'Domingo' },
                                             { value: '1', label: 'Segunda' },
@@ -125,8 +154,21 @@ function TeacherForm() {
 
                                         ]}
                                     />
-                                    <Input name="from" label="Das" type="time" />
-                                    <Input name="to" label="Até" type="time" />
+                                    <Input 
+                                    name="from" 
+                                    label="Das" 
+                                    type="time" 
+                                    value = {scheduleItem.from}
+                                    onChange={(e) => setScheduleItemValue(index, 'from', e.target.value)}
+
+                                    />
+                                    <Input name="to" 
+                                    label="Até" 
+                                    type="time"
+                                    value = {scheduleItem.to}
+                                    onChange={(e) => setScheduleItemValue(index, 'to', e.target.value)}
+
+                                    />
                                 </div>
                             )
                         })}
