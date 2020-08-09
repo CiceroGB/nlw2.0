@@ -19,7 +19,7 @@ export default class ClassesController {
         const subject = filters.subject as string;
         const week_day = filters.week_day as string;
         const time = filters.time as string;
-       
+
         if (!filters.subject || !filters.week_day || !filters.time) {
             return res.status(400).json({ error: "missing filters" })
         }
@@ -27,7 +27,7 @@ export default class ClassesController {
         const timeInMinutes = convertHourToMinutes(time);
 
         const classes = await db('classes')
-            .whereExists(function(){
+            .whereExists(function () {
                 this.select('class_schedule.*')
                     .from('class_schedule')
                     .whereRaw('`class_schedule`.`class_id` = `classes`.`id`')
@@ -36,11 +36,11 @@ export default class ClassesController {
                     .whereRaw('`class_schedule`.`to` > ??', [timeInMinutes])
             })
             .where('classes.subject', '=', subject)
-            .join('users', 'classes.user_id','=', 'user.id')
+            .join('users', 'classes.user_id', '=', 'users.id')
             .select(['classes.*', 'users.*']);
 
-           
-            return res.json(classes);
+
+        return res.json(classes);
 
     }
 
