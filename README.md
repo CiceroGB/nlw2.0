@@ -13,7 +13,7 @@
 
 ## About project
 
-Developed on the Next Level Week #02 event by [Rocketseat](https://rocketseat.com.br/)to connect teachers and students, where you can search for classes by subjects and specific days and times
+Developed on the Next Level Week #02 event by [Rocketseat](https://rocketseat.com.br/) to connect teachers and students, where you can search for classes by subjects and specific days and times
 
 ## Technologies
 
