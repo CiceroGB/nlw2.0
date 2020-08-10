@@ -6,7 +6,7 @@
   Proffy - Connect teachers and students.
 </h3>
 
-<img alt="Layout" src="link">
+<img alt="Layout" src="http://www.giphy.com/gifs/RhTgnbgMqFW8Z3aa8J">
 
 ## About project
 
