@@ -6,7 +6,22 @@
   Proffy - Connect teachers and students.
 </h3>
 
-<img alt="Layout" src="http://www.giphy.com/gifs/RhTgnbgMqFW8Z3aa8J">
+<h3 align="center">
+  Web Version.
+</h3>
+
+<h1 align="center">
+<img width="500"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89794136-05604e00-dafd-11ea-8131-9d74ccf489b9.gif">
+</h1>
+
+<h3 align="center">
+  Mobile Version.
+</h3>
+
+<h1 align="center">
+<img width="500"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89794136-05604e00-dafd-11ea-8131-9d74ccf489b9.gif">
+</h1>
+
 
 ## About project
 
