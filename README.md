@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="469" alt="logo" src="https://user-images.githubusercontent.com/63745509/89786971-202dc500-daf3-11ea-93a2-51b5ccee61ea.png">
+  <img width="300" alt="logo" src="https://user-images.githubusercontent.com/63745509/89786971-202dc500-daf3-11ea-93a2-51b5ccee61ea.png">
 </h1>
 
 <h3 align="center">
@@ -7,8 +7,8 @@
 </h3>
 
 <h1 align="center">
-<img width="400"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89794136-05604e00-dafd-11ea-8131-9d74ccf489b9.gif">
- <img width="200"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89797240-13b06900-db01-11ea-9b98-ff20be23f3bd.gif">
+<img width="600"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89794136-05604e00-dafd-11ea-8131-9d74ccf489b9.gif">
+ <img width="180"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89797240-13b06900-db01-11ea-9b98-ff20be23f3bd.gif">
 </h1>
 
 ## About project
