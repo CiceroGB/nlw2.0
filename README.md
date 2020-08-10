@@ -8,7 +8,7 @@
 
 <h1 align="center">
 <img width="400"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89794136-05604e00-dafd-11ea-8131-9d74ccf489b9.gif">
- <img width="400"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89796307-dc8d8800-daff-11ea-809e-7a09ed56b9f0.gif">
+ <img width="400"  alt="Layout" src="https://user-images.githubusercontent.com/63745509/89797240-13b06900-db01-11ea-9b98-ff20be23f3bd.gif)">
 </h1>
 
 ## About project
