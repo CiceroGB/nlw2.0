@@ -36,36 +36,34 @@ Developed on the Next Level Week #02 event by [Rocketseat](https://rocketseat.co
 
 **Install dependencies**
 
-```bash
+```sh
 $ yarn
 ```
 
 
 ### Backend
 
-```bash
-# Run migrations
+```sh
 $ yarn server knex:migrate
-
-# Run api service
+Run migrations
+```
+```sh
 $ yarn server dev
-
+Run api service
 ```
 
 ### Web
 
-```bash
-
-# Start client, be sure if server (backend) is running
+```sh
 $ yarn web start
+Start client, be sure if server (backend) is running
 ```
 
 ### Mobile
 
-```bash
-
-# Start expo service
+```sh
 $ yarn mobile start
+Start expo service
 ```
 
 
